@@ -1,0 +1,6 @@
+logfile = ""
+loglevel = "DEBUG"
+browserTimeout = "5m"
+browsertaskdelay = "2s"
+browserurl = "https://localhost:8444/zoom/de?exhibition"
+allowedprefixes = ["https://localhost:8446"]
