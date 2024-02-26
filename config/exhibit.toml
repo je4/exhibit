@@ -1,6 +1,6 @@
 logfile = ""
-loglevel = "DEBUG"
+loglevel = "ERROR"
 browserTimeout = "5m"
 browsertaskdelay = "2s"
-browserurl = "https://localhost:8444/zoom/de?exhibition"
-allowedprefixes = ["https://localhost:8446"]
+browserurl = "https://performance.sammlung.cc/zoom/de?exhibition"
+allowedprefixes = ["https://ba14ns21403-sec1.fhnw.ch"]

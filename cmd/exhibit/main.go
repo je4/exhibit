@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/je4/exhibit/v2/config"
 	"github.com/je4/exhibit/v2/pkg/browserControl"
+	configutil "github.com/je4/utils/v2/pkg/config"
 	"github.com/je4/utils/v2/pkg/zLogger"
 	"github.com/rs/zerolog"
 	"io"
@@ -35,8 +36,12 @@ func main() {
 	}
 
 	conf := &config.ExhibitConfig{
-		LogFile:  "",
-		LogLevel: "DEBUG",
+		LogFile:          "",
+		LogLevel:         "ERROR",
+		BrowserTimeout:   configutil.Duration(time.Minute * 5),
+		BrowserTaskDelay: configutil.Duration(time.Second * 2),
+		BrowserURL:       "https://performance.ausstellung.cc/zoom/de?exhibition",
+		AllowedPrefixes:  []string{"https://ba14ns21403-sec1.fhnw.ch"},
 	}
 
 	if err := config.LoadExhibitConfig(cfgFS, cfgFile, conf); err != nil {
